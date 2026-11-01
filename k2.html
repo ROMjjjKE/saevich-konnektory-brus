@@ -1,0 +1,40 @@
+<div class="modal" id="modal" hidden role="dialog" aria-modal="true" aria-labelledby="mTitle">
+  <div class="mback" data-close="modal"></div>
+  <div class="mbox">
+    <button class="mclose" data-close="modal" aria-label="Закрыть">✕</button>
+    <div class="mgrid">
+      <div class="mmedia"><img id="mImg" src="images/conn-1.jpg" alt=""></div>
+      <div class="minfo">
+        <span class="lbl" id="mKind" style="margin-bottom:8px"></span>
+        <h3 id="mTitle"></h3>
+        <span class="part" id="mArt"></span>
+        <p class="pdesc" id="mDesc" style="margin-top:10px"></p>
+        <div class="mwhere" id="mWhere"></div>
+        <table class="mspec"><tbody id="mSpec"></tbody></table>
+        <span class="lbl" style="margin-bottom:6px">Сечение бруса, мм</span>
+        <div class="mopts" id="mOpts" role="group" aria-label="Сечение бруса"></div>
+        <div class="mrow">
+          <div class="qty"><button type="button" id="mMinus" aria-label="Меньше">−</button><span id="mQty">1</span><button type="button" id="mPlus" aria-label="Больше">+</button></div>
+          <button class="btn btn-acc" id="mAdd">Добавить в корзину</button>
+        </div>
+        <p class="mhint">Стоимость и срок изготовления назовём после заявки: цена зависит от объёма партии.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="drawer" id="drawer" hidden role="dialog" aria-modal="true" aria-labelledby="dTitle">
+  <div class="dback" data-close="drawer"></div>
+  <div class="dpanel">
+    <div class="dhead"><b id="dTitle">Корзина</b><button class="mclose" style="position:static" data-close="drawer" aria-label="Закрыть корзину">✕</button></div>
+    <div class="ditems" id="dItems"></div>
+    <div class="dfoot">
+      <div class="sum"><span>Позиций</span><b id="dCount">0</b></div>
+      <div class="sum"><span>Всего изделий</span><b id="dTotal">0</b></div>
+      <p class="dnote">Цены в корзине не считаем: пришлём расчёт на всё содержимое с доставкой. Проверьте количество и отправьте заявку.</p>
+      <input class="dinput" id="dCity" type="text" placeholder="Город для доставки" autocomplete="address-level2">
+      <a class="btn btn-wa" id="dWa" href="#" target="_blank" rel="noopener">Отправить заявку в WhatsApp</a>
+      <button class="btn btn-line" id="dCopy" type="button">Скопировать список</button>
+    </div>
+  </div>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>

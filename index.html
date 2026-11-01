@@ -4,9 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Коннекторы под брус из стали 3 мм — производство, Борисов | ИП Саевич</title>
-<meta name="description" content="Металлические коннекторы и крепёж под брус от производителя: угловые тройники, Т-образные соединения, опоры бруса, крепления стропил. Сечения 80, 90, 100, 150 мм и по чертежу. Доставка по Беларуси. +375 29 649-59-74.">
+<meta name="description" content="Каталог коннекторов под брус с фото и описанием узла: опора, угловой тройник, Т-соединение, крестовина, пятка и конёк стропила. Сечения 80, 90, 100, 150 мм, сталь 3 мм. Корзина и расчёт комплекта, доставка по Беларуси. +375 29 649-59-74.">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <meta property="og:type" content="website">
+<meta property="og:image" content="images/conn-1.jpg">
 <meta property="og:title" content="Коннекторы под брус — сталь 3 мм, от производителя">
 <meta property="og:locale" content="ru_RU">
 <link rel="stylesheet" href="style.css">
@@ -19,7 +20,8 @@
     <span><span class="lg-t">Саевич · коннекторы под брус</span><span class="lg-s">сталь 3 мм · Борисов · по всей РБ</span></span>
   </a>
   <div class="cta" style="margin:0">
-    <a class="btn btn-ghost" href="#types">Виды креплений</a>
+    <a class="btn btn-ghost" href="#types">Каталог</a>
+    <button class="btn btn-ghost cartbtn" type="button" data-open-cart>Корзина <span class="cartn" data-empty="true">0</span></button>
     <a class="btn btn-acc" href="tel:+375296495974">Позвонить</a>
   </div>
 </div></header>
@@ -74,18 +76,33 @@
 </div></div></section>
 <section class="blk alt" id="types"><div class="wrap">
   <div class="sec">
-    <h2>Виды соединений</h2>
-    <p>Все изделия делаем из профильной трубы и листовой стали. Форма, угол и толщина металла — под вашу конструкцию.</p>
+    <h2>Каталог коннекторов</h2>
+    <p>Шесть узлов с фото, размерами и описанием: видно, как выглядит изделие и куда оно ставится. Фото — макеты внешнего вида, на изделии возможны отличия по сварке и отверстиям.</p>
   </div>
-  <div class="grid">
-    <article class="card"><span class="mono">01 · угол</span><h3>Угловой тройник</h3><p>Соединение бруса под 90° для каркасов беседок, навесов и стен. Снимает нагрузку с саморезов, работает на сжатие и сдвиг.</p></article>
-    <article class="card"><span class="mono">02 · Т-образный</span><h3>Т-образное соединение</h3><p>Крепление бруса к несущей балке встык. Не требует врубок, брус остаётся целым.</p></article>
-    <article class="card"><span class="mono">03 · опора</span><h3>Опора бруса</h3><p>Пятка под столб или стойку: держит брус над бетоном, убирает контакт дерева с влагой.</p></article>
-    <article class="card"><span class="mono">04 · стропила</span><h3>Крепление стропил</h3><p>Узлы для стропильной системы: пятка и конёк. Металл 3 мм держит снеговую нагрузку без деформации.</p></article>
-    <article class="card"><span class="mono">05 · заказ</span><h3>По вашим чертежам</h3><p>Присылайте эскиз, размеры или фото узла — изготовим под проект, включая нестандартные углы и сечения.</p></article>
-    <article class="card"><span class="mono">06 · комплект</span><h3>Расчёт комплекта</h3><p>Поможем посчитать, сколько коннекторов и какого типа нужно на вашу беседку или навес.</p></article>
+  <div class="catbar" id="filters">
+    <div class="fgroup"><span>Вид</span>
+      <button class="fchip" data-kind="all" aria-pressed="true">Все</button>
+      <button class="fchip" data-kind="опора" aria-pressed="false">Опора</button>
+      <button class="fchip" data-kind="угол" aria-pressed="false">Угол</button>
+      <button class="fchip" data-kind="Т-узел" aria-pressed="false">Т-узел</button>
+      <button class="fchip" data-kind="крест" aria-pressed="false">Крест</button>
+      <button class="fchip" data-kind="стропила" aria-pressed="false">Стропила</button>
+      <button class="fchip" data-kind="конёк" aria-pressed="false">Конёк</button>
+    </div>
+    <div class="fgroup"><span>Сечение</span>
+      <button class="fchip" data-size="all" aria-pressed="true">Любое</button>
+      <button class="fchip" data-size="80" aria-pressed="false">80</button>
+      <button class="fchip" data-size="90" aria-pressed="false">90</button>
+      <button class="fchip" data-size="100" aria-pressed="false">100</button>
+      <button class="fchip" data-size="150" aria-pressed="false">150</button>
+    </div>
+    <div class="fcount" id="pcount" aria-live="polite">6 позиций</div>
   </div>
+  <div class="pgrid" id="pgrid"></div>
+  <p class="pempty" id="pempty" hidden>Под этот фильтр позиций нет. Сбросьте вид или сечение — или закажите изделие по чертежу.</p>
+  <p class="pnote">Цены не публикуем: стоимость зависит от сечения, толщины стали и объёма. Соберите корзину — пришлём расчёт с доставкой (8–25 BYN по Беларуси). Комплект на беседку считаем по вашей схеме узлов.</p>
 </div></section>
+
 
 <section class="blk" id="sizes"><div class="wrap">
   <div class="sec">
@@ -173,6 +190,246 @@
   <span>ИП Саевич А. А. · коннекторы под брус · производство Борисов</span>
   <span>+375 29 649-59-74</span>
 </div></footer>
+<div class="modal" id="modal" hidden role="dialog" aria-modal="true" aria-labelledby="mTitle">
+  <div class="mback" data-close="modal"></div>
+  <div class="mbox">
+    <button class="mclose" data-close="modal" aria-label="Закрыть">✕</button>
+    <div class="mgrid">
+      <div class="mmedia"><img id="mImg" src="images/conn-1.jpg" alt=""></div>
+      <div class="minfo">
+        <span class="lbl" id="mKind" style="margin-bottom:8px"></span>
+        <h3 id="mTitle"></h3>
+        <span class="part" id="mArt"></span>
+        <p class="pdesc" id="mDesc" style="margin-top:10px"></p>
+        <div class="mwhere" id="mWhere"></div>
+        <table class="mspec"><tbody id="mSpec"></tbody></table>
+        <span class="lbl" style="margin-bottom:6px">Сечение бруса, мм</span>
+        <div class="mopts" id="mOpts" role="group" aria-label="Сечение бруса"></div>
+        <div class="mrow">
+          <div class="qty"><button type="button" id="mMinus" aria-label="Меньше">−</button><span id="mQty">1</span><button type="button" id="mPlus" aria-label="Больше">+</button></div>
+          <button class="btn btn-acc" id="mAdd">Добавить в корзину</button>
+        </div>
+        <p class="mhint">Стоимость и срок изготовления назовём после заявки: цена зависит от объёма партии.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="drawer" id="drawer" hidden role="dialog" aria-modal="true" aria-labelledby="dTitle">
+  <div class="dback" data-close="drawer"></div>
+  <div class="dpanel">
+    <div class="dhead"><b id="dTitle">Корзина</b><button class="mclose" style="position:static" data-close="drawer" aria-label="Закрыть корзину">✕</button></div>
+    <div class="ditems" id="dItems"></div>
+    <div class="dfoot">
+      <div class="sum"><span>Позиций</span><b id="dCount">0</b></div>
+      <div class="sum"><span>Всего изделий</span><b id="dTotal">0</b></div>
+      <p class="dnote">Цены в корзине не считаем: пришлём расчёт на всё содержимое с доставкой. Проверьте количество и отправьте заявку.</p>
+      <input class="dinput" id="dCity" type="text" placeholder="Город для доставки" autocomplete="address-level2">
+      <a class="btn btn-wa" id="dWa" href="#" target="_blank" rel="noopener">Отправить заявку в WhatsApp</a>
+      <button class="btn btn-line" id="dCopy" type="button">Скопировать список</button>
+    </div>
+  </div>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script>
+(function(){
+  var WA='375296495974';
+  var P=[
+    {id:'opora',kind:'опора',art:'СВ-01',name:'Опора бруса',img:'images/conn-1.jpg',
+     sizes:[80,90,100,150],steel:'3 мм',
+     short:'Пятка под стойку: держит брус над бетоном и убирает контакт дерева с влагой.',
+     full:'Сварная опора из листовой стали: основание крепится к бетону, в стакан входит брус. Дерево не касается фундамента, узел работает на сжатие и сдвиг. Ставится под стойки пергол, навесов и беседок.',
+     where:'Узел: низ стойки — от фундамента или винтовой сваи до обвязки.'},
+    {id:'ugol',kind:'угол',art:'СВ-02',name:'Угловой тройник 90°',img:'images/conn-2.jpg',
+     sizes:[80,90,100,150],steel:'3 мм',
+     short:'Соединяет два бруса под прямым углом в каркасе беседки, навеса или стены.',
+     full:'Два перпендикулярных лотка под брус, сваренных под 90°, с косынкой в углу. Снимает нагрузку с саморезов: узел держит форму на сжатие и сдвиг. Брус не нужно подрезать под врубку.',
+     where:'Узел: угол каркаса — стойка и обвязка, стойка и балка.'},
+    {id:'t',kind:'Т-узел',art:'СВ-03',name:'Т-образное соединение',img:'images/conn-3.jpg',
+     sizes:[100,150],steel:'3 мм',
+     short:'Крепит брус к несущей балке встык: брус остаётся целым, врубка не нужна.',
+     full:'Т-образный узел из листовой стали с рёбрами жёсткости. Брус примыкает к балке встык и фиксируется болтами через отверстия в лотке. Применяется в обвязке, при устройстве промежуточных стоек и ригелей.',
+     where:'Узел: примыкание бруса к балке — середина пролёта, промежуточная стойка.'},
+    {id:'krest',kind:'крест',art:'СВ-04',name:'Крестовина на четыре бруса',img:'images/conn-4.jpg',
+     sizes:[100,150],steel:'3 мм',
+     short:'Сводит четыре бруса в одном узле: пересечение стен, обвязка, углы перголы.',
+     full:'Симметричный крест из четырёх лотков со сварным центральным узлом. Позволяет собрать пересечение без врубок и без ослабления бруса. На несущих конструкциях делаем из стали 4 мм.',
+     where:'Узел: пересечение четырёх брусьев — обвязка, крестовина перголы.'},
+    {id:'pjatka',kind:'стропила',art:'СВ-05',name:'Пятка стропила',img:'images/conn-5.jpg',
+     sizes:[100,150],steel:'3 мм',
+     short:'Опорный узел стропила на обвязке: фиксирует угол и не даёт стропилу съехать.',
+     full:'Опорная площадка с боковыми рёбрами: стропило ложится на обвязку и держится от бокового сдвига. Узел работает на снеговую и ветровую нагрузку, ставится парой на каждое стропило.',
+     where:'Узел: стропило и верхняя обвязка — опорная пята ската.'},
+    {id:'konjok',kind:'конёк',art:'СВ-06',name:'Конёк стропильный',img:'images/conn-6.jpg',
+     sizes:[100,150],steel:'3 мм',
+     short:'Сводит две встречные стропильные ноги в вершине кровли без врубки.',
+     full:'Симметричный узел с двумя лотками под стропила и усилением под вершиной. Держит угол скатов, разгружает гвоздевое соединение. Под несущую кровлю делаем из стали 4 мм.',
+     where:'Узел: вершина кровли — соединение двух стропил.'}
+  ];
+  var SIZES_LBL=[80,90,100,150];
+  var GEN='Все изделия — из листовой стали 3 мм (4 мм на несущих узлах), сварные, под стандартные сечения бруса. Покрытие — по запросу: без него металл внутри конструкции нужно защищать от влаги.';
+  var KEY='saevich_cart_v1', CKEY='saevich_city_v1';
+  var cart={}, city='';
+  try{ cart=JSON.parse(localStorage.getItem(KEY)||'{}')||{}; city=localStorage.getItem(CKEY)||''; }catch(e){ cart={}; }
+  var $=function(s){return document.querySelector(s)};
+  var state={kind:'all',size:'all'};
+
+  function money(){return ''}
+  function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+  function byId(id){for(var i=0;i<P.length;i++){if(P[i].id===id)return P[i]}return null}
+  function keyOf(id,size){return id+'|'+size}
+
+  /* ---------- каталог ---------- */
+  var grid=$('#pgrid'), empty=$('#pempty'), pc=$('#pcount');
+  function visible(){
+    return P.filter(function(p){
+      if(state.kind!=='all' && p.kind!==state.kind) return false;
+      if(state.size!=='all' && p.sizes.indexOf(+state.size)<0) return false;
+      return true;
+    });
+  }
+  function card(p){
+    var sizes=p.sizes.map(function(s){return '<span>'+s+'×'+s+'</span>'}).join('');
+    return '<article class="pcard">'+
+      '<div class="pthumb"><span class="pbadge">'+esc(p.kind)+'</span>'+
+        '<img src="'+p.img+'" alt="'+esc(p.name)+' — коннектор под брус, сталь '+p.steel+'" width="760" height="760" loading="lazy" decoding="async"></div>'+
+      '<div class="pinfo">'+
+        '<span class="part">Арт. '+p.art+' · сталь '+p.steel+'</span>'+
+        '<h3>'+esc(p.name)+'</h3>'+
+        '<p class="pdesc">'+esc(p.short)+'</p>'+
+        '<div class="pmeta">'+sizes+'</div>'+
+        '<div class="pacts">'+
+          '<button class="btn btn-line" data-more="'+p.id+'">Подробнее</button>'+
+          '<button class="btn btn-acc" data-add="'+p.id+'">В корзину</button>'+
+        '</div>'+
+      '</div></article>';
+  }
+  function plural(n,a,b,c){var n10=n%10,n100=n%100;if(n10===1&&n100!==11)return a;if(n10>=2&&n10<=4&&(n100<12||n100>14))return b;return c}
+  function render(){
+    var list=visible();
+    grid.innerHTML=list.map(card).join('');
+    empty.hidden=list.length>0;
+    pc.textContent=list.length+' '+plural(list.length,'позиция','позиции','позиций');
+  }
+  document.querySelectorAll('#filters .fchip').forEach(function(b){
+    b.addEventListener('click',function(){
+      var k=b.dataset.kind, s=b.dataset.size;
+      if(k){ state.kind=k; document.querySelectorAll('[data-kind]').forEach(function(x){x.setAttribute('aria-pressed',String(x.dataset.kind===k))}); }
+      if(s){ state.size=s; document.querySelectorAll('[data-size]').forEach(function(x){x.setAttribute('aria-pressed',String(x.dataset.size===s))}); }
+      render();
+    });
+  });
+
+  /* ---------- модалка ---------- */
+  var modal=$('#modal'), mP=null, mSize=100, mQty=1, lastFocus=null;
+  function openModal(id){
+    mP=byId(id); if(!mP) return;
+    mSize=mP.sizes.indexOf(100)>=0?100:mP.sizes[0]; mQty=1;
+    lastFocus=document.activeElement;
+    $('#mImg').src=mP.img; $('#mImg').alt=mP.name+' — коннектор под брус';
+    $('#mKind').textContent='Вид: '+mP.kind;
+    $('#mTitle').textContent=mP.name;
+    $('#mArt').textContent='Арт. '+mP.art;
+    $('#mDesc').textContent=mP.full;
+    $('#mWhere').textContent=mP.where;
+    $('#mSpec').innerHTML=
+      '<tr><th>Толщина стали</th><td>'+mP.steel+(mP.steel==='3 мм'?' (4 мм на несущих)':'')+'</td></tr>'+
+      '<tr><th>Материал</th><td>листовая сталь, сварка</td></tr>'+
+      '<tr><th>Сечения бруса</th><td>'+mP.sizes.map(function(s){return s+'×'+s}).join(' · ')+' мм</td></tr>'+
+      '<tr><th>Крепёж</th><td>болты или саморезы по проекту</td></tr>'+
+      '<tr><th>Покрытие</th><td>по запросу (грунт или краска)</td></tr>'+
+      '<tr><th>Изготовление</th><td>под заказ, срок — по объёму партии</td></tr>';
+    $('#mOpts').innerHTML=mP.sizes.map(function(s){
+      return '<button type="button" data-ms="'+s+'" aria-pressed="'+(s===mSize)+'">'+s+'×'+s+'</button>';
+    }).join('');
+    $('#mQty').textContent=mQty;
+    modal.hidden=false; document.body.style.overflow='hidden';
+    document.querySelector('#mOpts button').focus();
+  }
+  function closeModal(){ modal.hidden=true; if($('#drawer').hidden) document.body.style.overflow=''; if(lastFocus) lastFocus.focus(); }
+  document.addEventListener('click',function(e){
+    var more=e.target.closest('[data-more]'), add=e.target.closest('[data-add]'), ms=e.target.closest('[data-ms]'), cl=e.target.closest('[data-close]');
+    if(more) openModal(more.dataset.more);
+    if(add){ var p=byId(add.dataset.add); addToCart(p.id, p.sizes.indexOf(100)>=0?100:p.sizes[0], 1); toast('Добавлено: '+p.name); }
+    if(ms){ mSize=+ms.dataset.ms; document.querySelectorAll('#mOpts button').forEach(function(b){b.setAttribute('aria-pressed',String(+b.dataset.ms===mSize))}); }
+    if(cl){ cl.dataset.close==='modal'?closeModal():closeDrawer(); }
+  });
+  $('#mMinus').addEventListener('click',function(){ mQty=Math.max(1,mQty-1); $('#mQty').textContent=mQty; });
+  $('#mPlus').addEventListener('click',function(){ mQty=Math.min(99,mQty+1); $('#mQty').textContent=mQty; });
+  $('#mAdd').addEventListener('click',function(){ addToCart(mP.id,mSize,mQty); toast('Добавлено: '+mP.name+' '+mSize+'×'+mSize); closeModal(); });
+  document.addEventListener('keydown',function(e){
+    if(e.key!=='Escape') return;
+    if(!modal.hidden) closeModal(); else if(!$('#drawer').hidden) closeDrawer();
+  });
+
+  /* ---------- корзина ---------- */
+  var drawer=$('#drawer'), dItems=$('#dItems'), dCount=$('#dCount'), dTotal=$('#dTotal'), dWa=$('#dWa'), dCopy=$('#dCopy'), dCity=$('#dCity');
+  dCity.value=city;
+  function save(){ try{ localStorage.setItem(KEY,JSON.stringify(cart)); localStorage.setItem(CKEY,dCity.value||''); }catch(e){} }
+  function lines(){
+    var out=[];
+    Object.keys(cart).forEach(function(k){
+      var parts=k.split('|'), p=byId(parts[0]); if(!p) return;
+      out.push({p:p,size:+parts[1],qty:cart[k]});
+    });
+    return out;
+  }
+  function addToCart(id,size,qty){
+    var k=keyOf(id,size); cart[k]=(cart[k]||0)+qty; save(); paint();
+  }
+  function paint(){
+    var L=lines(), pos=L.length, tot=L.reduce(function(a,b){return a+b.qty},0);
+    dCount.textContent=pos; dTotal.textContent=tot;
+    var n=document.querySelectorAll('.cartn'); n.forEach(function(el){ el.textContent=tot; el.dataset.empty=String(tot===0); });
+    if(!pos){ dItems.innerHTML='<p class="dempty">Корзина пуста. Добавьте коннекторы из каталога — пришлём расчёт на весь комплект.</p>'; }
+    else {
+      dItems.innerHTML=L.map(function(it){
+        var k=keyOf(it.p.id,it.size);
+        return '<div class="ditem"><img src="'+it.p.img+'" alt="" width="56" height="56" loading="lazy">'+
+          '<div><b>'+esc(it.p.name)+'</b><div class="sub">'+it.p.art+' · '+it.size+'×'+it.size+' мм</div>'+
+          '<div class="ctl"><button type="button" data-dec="'+k+'" aria-label="Меньше">−</button><span>'+it.qty+'</span><button type="button" data-inc="'+k+'" aria-label="Больше">+</button>'+
+          '<button type="button" class="drem" data-rem="'+k+'">удалить</button></div></div>'+
+          '<div class="part">'+it.qty+' шт.</div></div>';
+      }).join('');
+    }
+    dWa.href=waLink();
+  }
+  function waLink(){
+    var L=lines();
+    if(!L.length) return 'https://wa.me/'+WA;
+    var t=['Заявка с сайта — коннекторы под брус',''];
+    L.forEach(function(it,i){ t.push((i+1)+'. '+it.p.name+' (арт. '+it.p.art+'), '+it.size+'×'+it.size+' мм — '+it.qty+' шт.'); });
+    t.push('');
+    t.push('Всего изделий: '+L.reduce(function(a,b){return a+b.qty},0)+' в '+L.length+' позициях.');
+    if(dCity.value.trim()) t.push('Город доставки: '+dCity.value.trim());
+    t.push('Прошу рассчитать стоимость с доставкой и срок изготовления.');
+    return 'https://wa.me/'+WA+'?text='+encodeURIComponent(t.join('\n'));
+  }
+  function openDrawer(){ drawer.hidden=false; document.body.style.overflow='hidden'; document.querySelector('#drawer .mclose').focus(); }
+  function closeDrawer(){ drawer.hidden=true; if(modal.hidden) document.body.style.overflow=''; }
+  document.addEventListener('click',function(e){
+    var inc=e.target.closest('[data-inc]'), dec=e.target.closest('[data-dec]'), rem=e.target.closest('[data-rem]');
+    if(inc){ cart[inc.dataset.inc]++; save(); paint(); }
+    if(dec){ var k=dec.dataset.dec; cart[k]--; if(cart[k]<=0) delete cart[k]; save(); paint(); }
+    if(rem){ delete cart[rem.dataset.rem]; save(); paint(); }
+  });
+  dCity.addEventListener('input',function(){ save(); dWa.href=waLink(); });
+  document.querySelectorAll('[data-open-cart]').forEach(function(b){ b.addEventListener('click',function(e){ e.preventDefault(); openDrawer(); }); });
+  dWa.addEventListener('click',function(e){ if(!lines().length){ e.preventDefault(); toast('Сначала добавьте коннекторы в корзину'); } });
+  dCopy.addEventListener('click',function(){
+    var L=lines(); if(!L.length){ toast('Корзина пуста'); return; }
+    var txt=decodeURIComponent(waLink().split('text=')[1]||'');
+    var done=function(){ toast('Список скопирован'); };
+    if(navigator.clipboard&&navigator.clipboard.writeText){ navigator.clipboard.writeText(txt).then(done,fallback); } else fallback();
+    function fallback(){ var ta=document.createElement('textarea'); ta.value=txt; document.body.appendChild(ta); ta.select(); try{document.execCommand('copy');done()}catch(e){toast('Не удалось скопировать')} ta.remove(); }
+  });
+
+  var tEl=$('#toast'), tT;
+  function toast(msg){ tEl.textContent=msg; tEl.dataset.on='true'; clearTimeout(tT); tT=setTimeout(function(){ tEl.dataset.on='false'; },2200); }
+
+  render(); paint();
+  window.__cart={add:addToCart, lines:lines, state:state, wa:waLink};
+})();
+</script>
 </body>
 </html>
 <script>
